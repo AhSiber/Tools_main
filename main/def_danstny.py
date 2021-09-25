@@ -13,5 +13,3 @@ class Danstny  :
         name = requests.get('https://api.codebazan.ir/danestani/').text 
         return name 
 
-
-print(Danstny.dnst())
