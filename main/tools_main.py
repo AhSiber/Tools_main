@@ -1,6 +1,5 @@
 from colorama import Fore, init
 from pyfiglet import figlet_format
-from tkinter import font
 from socket import gethostbyname, gethostname
 import calendar
 from time import time, localtime
