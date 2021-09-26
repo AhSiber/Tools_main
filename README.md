@@ -38,7 +38,17 @@ req | More accurate time with month, year and day
 font | 70 interesting and attractive fonts 
 des | Interesting facts in Persian
 joke | Funny and funny jokes
- number | Convert numbers from English to Persian  
+number | Convert numbers from English to Persian  
+craet password | Generate passwords with custom characters  
+Wikipedia | Search Wikipedia  
+Convert text to Morse code 
+ping site 
+qr code | Build QR code  
+Character | Number of characters in texts and numbers  
+True Code Meli  
+Download | Download linke 
+Email Verification  
+Developer | id,name,github
 
 install in Trmuex : 
 
