@@ -75,5 +75,5 @@ install in Trmuex :
 10 - ```pip install verify_email```
 
 
-<h2> You can download Thermiox from Google Play  . 
+<h2> You can download Termux from Google Play  . 
 
