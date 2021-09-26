@@ -38,7 +38,7 @@ req | More accurate time with month, year and day
 font | 70 interesting and attractive fonts 
 des | Interesting facts in Persian
 joke | Funny and funny jokes
-
+ number | Convert numbers from English to Persian  
 
 install in Trmuex : 
 
