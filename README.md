@@ -52,25 +52,26 @@ Developer | id,name,github
 
 install in Trmuex : 
 
-0 - pkg install python
+0 - ```pkg install python```
 
-1 - pip install colorama
+1 - ```pip install colorama```
 
-2 - pip install pyfiglet
+2 - ```pip install pyfiglet```
 
-3 - pip install time 
+3 - ```pip install time ```
 
-4 - pip install calender 
+4 - ```pip install calender``` 
 
-5 - pip install requests
+5 - ```pip install requests```
 
-6 - ls
+6 - ``ls``
 
-7 - cd main
+7 - ```cd main```
 
-8 - ls 
+8 -``` ls ```
 
-9 - python3 tools_main.py 
+9 - ```python3 tools_main.py ```
+10 - ```pip install verify_email```
 
 
 <h2> You can download Thermiox from Google Play  . 
