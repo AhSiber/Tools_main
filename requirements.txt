@@ -1,0 +1,9 @@
+pip install colorama  
+pip install gTTS  
+pip install socket 
+pip install pyfiglet  
+pip install calendar 
+pip install wget 
+pip install requests
+pip install verify_email 
+pip install random  
