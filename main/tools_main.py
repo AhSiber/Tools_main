@@ -1,10 +1,12 @@
-from os import execlp
+
 from colorama import Fore, init
+import gtts
 from pyfiglet import figlet_format
 from socket import gethostbyname, gethostname
 import calendar
 from time import time, localtime
-import wget 
+from pytube.__main__ import YouTube
+import wget
 import requests
 from def_init_mine import my_req
 from define_font import font
@@ -12,8 +14,9 @@ from def_danstny import Danstny
 from def_joke import joke
 from def_numbers import numberss
 from meali import code_meali
-from verify_email import verify_email 
-
+from verify_email import verify_email
+from random import randrange
+from tkinter import * 
 
 # {Knowledge in Persian}
 # Developer : Ahura
@@ -31,8 +34,8 @@ help_tools = '''
 # [7] req               [18] True Code Meli 
 # [8] font              [19] Download  
 # [9] des               [20] Email Verification  
-# [10] joke             [21] Developer 
-# [11] number 
+# [10] joke             [21] Developer (GUL)
+# [11] number           [22] voice 
 
 '''
 print(Fore.RED + help_tools)
@@ -43,7 +46,6 @@ print(Fore.GREEN)
 user = input('enter Tools : ').lower()
 if user == "1":
     try:
-
         def shop(Overall_profit, Total):
             return F"Overall profit : {Overall_profit - Total}"
         Dispute = input('type Overall_profit : ')
@@ -137,98 +139,128 @@ elif user == "11":
     except:
         print(Fore.RED + "error Tools number ")
 
-elif user == "12" : 
+elif user == "12":
     try:
         user_password = int(input('Enter len password : '))
-        name = requests.get(f"http://api.codebazan.ir/password/?length={user_password}").text 
-        print(f"password : {Fore.YELLOW + name}") 
-    except : 
-
-        print(Fore.RED + "error password") 
-
-
-elif user == "13" : 
-    try: 
-        Wikipedia_user= input('search in Wikipedia : ')
-        Wikipedia = requests.get(f"https://api.codebazan.ir/wiki/?search={Wikipedia_user}").text
-        print(Wikipedia) 
+        name = requests.get(
+            f"http://api.codebazan.ir/password/?length={user_password}").text
+        print(f"password : {Fore.YELLOW + name}")
     except:
-        print(Fore.RED + "error search Wikipedia") 
 
-elif user == "14" : 
-    try : 
+        print(Fore.RED + "error password")
+
+
+elif user == "13":
+    try:
+        Wikipedia_user = input('search in Wikipedia : ')
+        Wikipedia = requests.get(
+            f"https://api.codebazan.ir/wiki/?search={Wikipedia_user}").text
+        print(Wikipedia)
+    except:
+        print(Fore.RED + "error search Wikipedia")
+
+elif user == "14":
+    try:
         user_mours = input('type value : ')
         lange = str(input('enter lange : '))
-        nmours = requests.get(f"https://api.codebazan.ir/mourse/?lang={lange}&text={user_mours}").text
-        print(nmours) 
+        nmours = requests.get(
+            f"https://api.codebazan.ir/mourse/?lang={lange}&text={user_mours}").text
+        print(nmours)
     except:
-        print(Fore.RED + "error tools mours")  
+        print(Fore.RED + "error tools mours")
 
-elif user == "15" : 
-    try : 
+elif user == "15":
+    try:
         user_ping = input('Enter site : ')
-        ping = requests.get(f"https://api.codebazan.ir/ping/?url={user_ping}").text
+        ping = requests.get(
+            f"https://api.codebazan.ir/ping/?url={user_ping}").text
         print(f"ping site : {Fore.LIGHTBLUE_EX + ping}")
 
-    except : 
-        print(Fore.RED + "error tools ping")  
+    except:
+        print(Fore.RED + "error tools ping")
 
 
-
-elif user == "16" :
-    try: 
+elif user == "16":
+    try:
         sname = input('Enter Address exs QU : ')
-        my = (f"https://api.codebazan.ir/qr/?size=500x500&text={sname}.png") 
-        dow = wget.download(my)  
+        my = (f"https://api.codebazan.ir/qr/?size=500x500&text={sname}.png")
+        dow = wget.download(my)
         dow = f'{sname}.png'
         print(dow)
-    except : 
-        print(Fore.RED + "error tools qrCode ")  
+    except:
+        print(Fore.RED + "error tools qrCode ")
 
-elif user == "17" : 
-    try : 
+elif user == "17":
+    try:
 
         user_len = input('Enter Character : ')
-        print(F"Number of characters : {len(user_len)}" )
-    except : 
-        print(Fore.RED + "error tools Character ")  
-
-elif user == "18" : 
-    try: 
-        user_code_maily = int(input('Enter Code meli : '))
-        print(code_meali.nano(user_code_maily)) 
-    except: 
-        print(Fore.RED + "error tools codemali")  
-
-elif user == "19" : 
-    try: 
-        users_Download = input('Enter linke : ') 
-        Dosnm = wget.download(users_Download) 
-        print(Dosnm) 
+        print(F"Number of characters : {len(user_len)}")
     except:
-        print(Fore.RED + "error tools Download ")  
+        print(Fore.RED + "error tools Character ")
+
+elif user == "18":
+    try:
+        user_code_maily = int(input('Enter Code meli : '))
+        print(code_meali.nano(user_code_maily))
+    except:
+        print(Fore.RED + "error tools codemali")
+
+elif user == "19":
+    try:
+        users_Download = input('Enter linke : ')
+        Dosnm = wget.download(users_Download)
+        print(Dosnm)
+    except:
+        print(Fore.RED + "error tools Download ")
 
 
-elif user == "20" : 
-    try: 
+elif user == "20":
+    try:
         email = str(input('enter Email : '))
         print(f"your email {verify_email(email)}")
-    except: 
-        print(Fore.RED + "error tools email ")  
+    except:
+        print(Fore.RED + "error tools email ")
 
 
-elif user == "21" : 
+elif user == "21":
+    num = Tk()
+    num.title("Developer")
+    num.geometry("300x200")
+    num.resizable(width=False, height=False)
+    num.configure(bg="#F5F6FA")
+
+    new_lab = Label(num, text="(Knowledge in Persian)")
+    new_lab.place(x=40, y=40)
+
+    Developer = Label(num, text="Developer : Ahura")
+    Developer.place(x=40, y=60)
+
+    github = Label(num, text="git hub : https://github.com/AhSiber")
+    github.place(x=40, y=80)
+
     new = f''' 
-{Fore.LIGHTCYAN_EX}
+    {Fore.LIGHTCYAN_EX}
 
             (Knowledge in Persian)
             Developer : Ahura
             git hub : https://github.com/AhSiber
 
-    ''' 
-    print(new) 
+    '''
+    print(new)
 
-else:   
+    num.mainloop()
+
+elif user == "22":
+    try:
+        user_mp3 = str(input('Enter string : '))
+        tts = gtts.gTTS(user_mp3)
+        name_mp3 = str(randrange(1, 10000))
+        tts.save(f"{name_mp3}.mp3")
+
+    except:
+        print(Fore.RED + "error tools voice ")
+ 
+else:
     print(Fore.RED + "Error input !")
 
 Time_end = time()
