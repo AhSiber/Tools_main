@@ -1,5 +1,7 @@
-# Tools_main
-With this tool you can do many things.
+<p align="center">
+  <img src="https://img.shields.io/badge/NAME%20TOOL-Tools-red"/>
+  <img src="https://img.shields.io/badge/CODED%20WITH-PYTHON-%233572A5"/>
+   <img src="https://img.shields.io/badge/MADE%20IN-IRAN-Green"/>
 <h4> Today, I live in a world where technology is an important part. In this tool, you can access various tools. One of the features of this tool is to calculate bank and other benefits. . . A graphic version will be added to this tool soon. In the next updates, of course, today, September 23, 2021, this tool was downloaded for free open source at GateHub! According to MIT rules:
 MIT text:
 MIT License
@@ -38,42 +40,30 @@ req | More accurate time with month, year and day
 font | 70 interesting and attractive fonts 
 des | Interesting facts in Persian
 joke | Funny and funny jokes
-number | Convert numbers from English to Persian  
-craet password | Generate passwords with custom characters  
-Wikipedia | Search Wikipedia  
-Convert text to Morse code 
-ping site 
-qr code | Build QR code  
-Character | Number of characters in texts and numbers  
-True Code Meli  
-Download | Download linke 
-Email Verification  
-Developer | id,name,github
+
 
 install in Trmuex : 
 
-0 - ```pkg install python```
+0 - pkg install python
 
-1 - ```pip install colorama```
+1 - pip install colorama
 
-2 - ```pip install pyfiglet```
+2 - pip install pyfiglet
 
-3 - ```pip install time ```
+3 - pip install time 
 
-4 - ```pip install calender``` 
+4 - pip install calender 
 
-5 - ```pip install requests```
+5 - pip install requests
 
-6 - ``ls``
+6 - ls
 
-7 - ```cd main```
+7 - cd main
 
-8 -``` ls ```
+8 - ls 
 
-9 - ```python3 tools_main.py ```
-
-10 - ```pip install verify_email```
+9 - python3 tools_main.py 
 
 
-<h2> You can download Termux from Google Play  . 
+<h2> You can download Thermiox from Google Play  . 
 
