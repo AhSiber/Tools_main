@@ -13,10 +13,13 @@ from define_font import font
 from def_danstny import Danstny
 from def_joke import joke
 from def_numbers import numberss
-from meali import code_meali
+from meali import *
 from verify_email import verify_email
 from random import randrange
 from tkinter import * 
+import tkinter.messagebox
+from os import system 
+
 
 # {Knowledge in Persian}
 # Developer : Ahura
@@ -25,7 +28,7 @@ from tkinter import *
 init()  # windows
 
 help_tools = ''' 
-# [1] Dispute           [12] craet password 
+# [1] Dispute           [12] craet password                 [24] DDos 
 # [2] Bank              [13] Wikipedia  
 # [3] charge            [14] Convert text to Morse code  
 # [4] ip                [15] ping site 
@@ -36,6 +39,7 @@ help_tools = '''
 # [9] des               [20] Email Verification  
 # [10] joke             [21] Developer (GUL)
 # [11] number           [22] voice 
+                        [23] calculator (GUL)
 
 '''
 print(Fore.RED + help_tools)
@@ -200,8 +204,8 @@ elif user == "17":
 
 elif user == "18":
     try:
-        user_code_maily = int(input('Enter Code meli : '))
-        print(code_meali.nano(user_code_maily))
+        user_code_maily = input('Enter Code meli : ')
+        print(code_meali.mali(user_code_maily))
     except:
         print(Fore.RED + "error tools codemali")
 
@@ -260,11 +264,136 @@ elif user == "22":
     except:
         print(Fore.RED + "error tools voice ")
  
-else:
+# ============================================== Gul ================================ 
+
+elif user == "23" : 
+    root = Tk()
+    root.geometry("200x200")
+    root.title('claucar')
+    root.resizable(width=False, height=False)
+    color = "#DFE4EA"
+    root.configure(bg=color)
+
+    num1 = StringVar() 
+    num2 = StringVar() 
+    my = StringVar()
+
+
+    # Frames ---------------------------------------
+
+    top1 = Frame(root , width=1 , height=200 , bg=color) 
+    top1.pack(side="top") 
+
+    top2 = Frame(root , width=200 , height=200 , bg=color) 
+    top2.pack(side="top")  
+
+    top3 = Frame(root , width=200 , height=200 , bg=color) 
+    top3.pack(side="top") 
+
+    top4 = Frame(root , width=200 , height=200 , bg=color) 
+    top4.pack(side="top" ) 
+
+    # funcashan ---------------------------------------
+
+
+    def msgbox(msi) :
+        if msi == "error": 
+            tkinter.messagebox.showerror('ERROR' , 'Error inputs To clucter') 
+
+
+    def game() : 
+        try:    
+            number = float(num1.get()) + float(num2.get())
+            my.set(number) 
+        except: 
+            msgbox('error')
+
+
+    def tg() : 
+        try : 
+            ts = float(num1.get()) /  float(num2.get()) 
+            my.set(ts) 
+        except : 
+            msgbox('error')
+
+
+    def zrb() : 
+        try : 
+            t = float(num1.get()) *  float(num2.get()) 
+            my.set(t) 
+        except : 
+            msgbox('error')
+
+
+
+    def mn() : 
+        if num2.get() == "0" :
+            KeyError('error')
+        try : 
+            m = float(num1.get()) - float(num2.get()) 
+            my.set(m) 
+        except :
+            msgbox('error')
+
+        
+    
+
+    # Buttons ---------------------------------------
+
+    but1 = Button(top2 , text="+" , width=4 , height=2 , command= lambda : game()) 
+    but1.pack(side="left" , padx=2 , pady=2)
+
+    but2 = Button(top2 , text="/", width=4 , height=2 , command= lambda : tg()) 
+    but2.pack(side="left" , padx=2 , pady=2)
+
+    but3 = Button(top2 , text="*", width=4 , height=2 , command = lambda : zrb()) 
+    but3.pack(side="left" , padx=2 , pady=2)
+
+    but4 = Button(top2 , text="-", width=4 , height=2 , command= lambda : mn()) 
+    but4.pack(side="left" , padx=2 , pady=1)
+
+    # Entrys end labls  ---------------------------------------
+
+    lb1 = Label(top1 , text="Enter numbers :") 
+    lb1.pack(side="top" , padx=1 , pady=1) 
+    en = Entry(top1 , background="WHITE" , textvariable=num1)
+    en.pack(side="top" , padx=2 , pady=2) 
+
+
+    lb2 = Label(top1 , text=" raulat end :") 
+    lb2.pack(side="top" , padx=1 , pady=1) 
+    en2 = Entry(top1 , background="WHITE" , textvariable=num2)
+    en2.pack(side="top" , padx=2 , pady=2) 
+
+
+
+    en2 = Entry(top3 , background="#ECF0F1" , textvariable=my)
+    en2.pack(side="bottom" , padx=4 , pady=5) 
+
+
+    lb2 = Label(top3 , text=" end in numbers :") 
+    lb2.pack(side="bottom" , padx=1 , pady=1) 
+
+
+    root.mainloop()
+
+# ================================================ The End Gul ====================================
+
+elif user == "24" : 
+    try : 
+        en_link_addres = input('Enter linke site : ')
+        new_my = system(f"ping {en_link_addres}") 
+    except : 
+        print(Fore.RED + "error tools DDos ") 
+
+else : 
     print(Fore.RED + "Error input !")
+
+
 
 Time_end = time()
 my_and_time = localtime(Time_end)
 with open("./with.txt", mode='a') as files:
     files.write(
         F"Time_login : {my_and_time.tm_hour}:{my_and_time.tm_min}:{my_and_time.tm_sec} : Tools :  {user} \n")
+
