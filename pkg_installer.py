@@ -61,5 +61,7 @@ try:
     print('Start installing tkinter  ')
     os.system("pip install tkinter")
     sleep(120.0) 
+    print("----------------------------------------------------------------------------------") 
+    os.system('pip install cryptography')
 except :
     print('There is a problem with the installation')
