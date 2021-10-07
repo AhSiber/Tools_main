@@ -7,3 +7,6 @@ wget
 requests
 verify_email 
 random  
+tkinter 
+os
+cryptography  
