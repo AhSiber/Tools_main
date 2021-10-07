@@ -2,7 +2,8 @@
   <img src="https://img.shields.io/badge/NAME%20TOOL-Tools-red"/>
   <img src="https://img.shields.io/badge/CODED%20WITH-PYTHON-%233572A5"/>
    <img src="https://img.shields.io/badge/MADE%20IN-IRAN-Green"/>
-<h4> Today, I live in a world where technology is an important part. In this tool, you can access various tools. One of the features of this tool is to calculate bank and other benefits. . . A graphic version will be added to this tool soon. In the next updates, of course, today, September 23, 2021, this tool was downloaded for free open source at GateHub! According to MIT rules:
+
+Today, I live in a world where technology is an important part. In this tool, you can access various tools. One of the features of this tool is to calculate bank and other benefits. . . A graphic version will be added to this tool soon. In the next updates, of course, today, September 23, 2021, this tool was downloaded for free open source at GateHub! According to MIT rules:
 MIT text:
 MIT License
 
@@ -40,30 +41,31 @@ req | More accurate time with month, year and day
 font | 70 interesting and attractive fonts 
 des | Interesting facts in Persian
 joke | Funny and funny jokes
+number | Convert numbers to letters 
+craet password  | Build very strong passwords  
+Wikipedia  | Search Wikipedia  
+Convert text to Morse code  | Become Morse 
+ping site | Get site speed  
+qr code  | Build QR code  
+character | Input characters  
+True Code Meli | National code accuracy  
+Download  | Download link  
+Email Verification  | Detect right and wrong emails  
+Developer  | Gul and terminal 
+voice | Convert strings to audio  
+calculator  | Graphic calculator 
+DDos  | Didas attack on the site 
+NootBok  | Graphic NootBok  
+encode | File encoding 
+decode  | Decrypt the file 
 
+<img src="https://img.shields.io/badge/Telegram-%40YouTube__Packag-green"/>
 
-install in Trmuex : 
+<img src="https://img.shields.io/badge/lange-En-blue"/>
 
-0 - pkg install python
+<img src="https://img.shields.io/badge/Developer-Ahura-lightgrey"/>
 
-1 - pip install colorama
+<img src="https://img.shields.io/badge/Programming%20language-pythin-red"/>
+<p> 
 
-2 - pip install pyfiglet
-
-3 - pip install time 
-
-4 - pip install calender 
-
-5 - pip install requests
-
-6 - ls
-
-7 - cd main
-
-8 - ls 
-
-9 - python3 tools_main.py 
-
-
-<h2> You can download Thermiox from Google Play  . 
-
+<img src="https://img.shields.io/badge/Programming%20language-pythin-red"/>
