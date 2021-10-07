@@ -69,5 +69,3 @@ decode  | Decrypt the file
 
   <img src="https://img.shields.io/badge/Programming%20language-pythin-red"/>
   <p> 
-
-  <img src="https://img.shields.io/badge/Programming%20language-pythin-red"/>
