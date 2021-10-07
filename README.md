@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/NAME%20TOOL-Tools-red"/>
   <img src="https://img.shields.io/badge/CODED%20WITH-PYTHON-%233572A5"/>
-   <img src="https://img.shields.io/badge/MADE%20IN-IRAN-Green"/>
+  <img src="https://img.shields.io/badge/MADE%20IN-IRAN-Green"/>
 
 Today, I live in a world where technology is an important part. In this tool, you can access various tools. One of the features of this tool is to calculate bank and other benefits. . . A graphic version will be added to this tool soon. In the next updates, of course, today, September 23, 2021, this tool was downloaded for free open source at GateHub! According to MIT rules:
 MIT text:
@@ -59,13 +59,15 @@ NootBok  | Graphic NootBok
 encode | File encoding 
 decode  | Decrypt the file 
 
-<img src="https://img.shields.io/badge/Telegram-%40YouTube__Packag-green"/>
+<p align="center"> 
 
-<img src="https://img.shields.io/badge/lange-En-blue"/>
+  <img src="https://img.shields.io/badge/Telegram-%40YouTube__Packag-green"/>
 
-<img src="https://img.shields.io/badge/Developer-Ahura-lightgrey"/>
+  <img src="https://img.shields.io/badge/lange-En-blue"/>
 
-<img src="https://img.shields.io/badge/Programming%20language-pythin-red"/>
-<p> 
+  <img src="https://img.shields.io/badge/Developer-Ahura-lightgrey"/>
 
-<img src="https://img.shields.io/badge/Programming%20language-pythin-red"/>
+  <img src="https://img.shields.io/badge/Programming%20language-pythin-red"/>
+  <p> 
+
+  <img src="https://img.shields.io/badge/Programming%20language-pythin-red"/>
