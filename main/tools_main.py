@@ -18,7 +18,10 @@ from random import randrange # random number
 from tkinter import * # GUL 
 import tkinter.messagebox # GUL hanel Error 
 from os import system # os madouls in system 
-from cryptography.fernet import Fernet # Encode end decrypt 
+from cryptography.fernet import Fernet # Encode end decrypt
+import platform
+
+
 
 # {Knowledge in Persian}
 # Developer : Ahura
@@ -31,7 +34,7 @@ help_tools = '''
 # [2] Bank              [13] Wikipedia                      [25] NootBok (GUL)
 # [3] charge            [14] Convert text to Morse code     [26] encode 
 # [4] ip                [15] ping site                      [27] decode 
-# [5] Date              [16] qr code
+# [5] Date              [16] qr code                        [28] shutdown
 # [6] time              [17] Character  
 # [7] req               [18] True Code Meli 
 # [8] font              [19] Download  
@@ -424,21 +427,48 @@ elif user == "27":
     enc_2 = f.decrypt(data_10) 
     files.write(enc_2) 
 
+
+#shut down =========================================================== 
+
+elif user == "28" : 
+    try : 
+        plat = platform.system() 
+        print(plat)
+        if plat == "Windows" : 
+            system('shutdown -s -t 10')
+
+        elif plat == "linux" : 
+            system('shutdown -h 10 ') 
+
+        elif plat == "darwin"  :
+            system("shutdown -h -t 10 ") 
+    except : 
+        print(Fore.RED + "error tools shutdown ")  
+
 else:
     print(Fore.RED + "Error input !")
 
+
+# ======================================================= Time =======
+Time_end_res = time() # time 
+my_and_rews = localtime(Time_end_res)  
+
+De_time = (f"{my_and_rews.tm_hour}:{my_and_rews.tm_min}:{my_and_rews.tm_sec}")
+
+
+# =========================================== Date =========================  
 Time_end = time() # time 
 my_and_time = localtime(Time_end)
 with open("./with.txt", mode='a') as files: # write to txt 
-    files.write(
-        F"Time_login : {my_and_time.tm_hour}:{my_and_time.tm_min}:{my_and_time.tm_sec} : Tools :  {user} \n") # Date 
+    files.write(F"\nTools : {user} \ntime : {De_time} \nplatform : {platform.system()}") # Date
+    files.write("\n--------------------")
 
+# =========================================== Date =========================  
 
-
-Time_end = time() # time Download 
-my_and_time = localtime(Time_end)
-with open("./link_dow.txt", mode='a') as files: # write to txt 
-    if user == "19" : 
-        files.write(
-            F"Time_login : {my_and_time.tm_hour}:{my_and_time.tm_min}:{my_and_time.tm_sec} : link :  {users_Download} \n") # Date 
+if user == '19' : 
+    with open("./with.txt", mode='a') as files: # write to txt 
+        files.write(F"\nTools : {user} \ntime : {De_time} \nplatform : {platform.system()} \nlink : {users_Download}") # Date
+        files.write("\n--------------------")
+else : 
+    exit()
 
