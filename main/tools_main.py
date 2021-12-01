@@ -1,7 +1,7 @@
-
+import os 
 from colorama import Fore, init # color in python 'colorama' Func in Windows 'init' !
 import gtts # voice in python 
-from pyfiglet import figlet_format # pyfiglet in python 'Tools' 
+# from pyfiglet import figlet_format # pyfiglet in python 'Tools' 
 from socket import gethostbyname, gethostname # ip in socket '127.0.0.1'
 import calendar # calend in python '2021' , '4' , '23'
 from time import time, localtime # time 12 : 00 
@@ -20,14 +20,19 @@ import tkinter.messagebox # GUL hanel Error
 from os import system # os madouls in system 
 from cryptography.fernet import Fernet # Encode end decrypt
 import platform
+import sys 
 
-
+# clear system ! 
+os.system("clear")
 
 # {Knowledge in Persian}
 # Developer : Ahura
 # git hub : https://github.com/AhSiber
 
-init()  # windows
+if sys.platform == "Linux" : 
+    pass
+else: 
+    init()  # windows
 
 help_tools = ''' 
 # [1] Dispute           [12] craet password                 [24] DDos
@@ -46,8 +51,10 @@ help_tools = '''
 '''
 print(Fore.RED + help_tools) # color 
 
-print(figlet_format('Tools', font="standard")) # Figlet format 'Tools'
-print(Fore.GREEN) # color green 
+# print(figlet_format('Tools', font="standard")) # Figlet format 'Tools'
+# print(Fore.GREEN) # color green 
+os.system("figlet Tools ")  
+
 
 user = input('enter Tools : ').lower() # input "lower" -- user 
 if user == "1":
@@ -89,6 +96,7 @@ elif user == "4":
     try:
         name = gethostname() # get name host 
         by_name = gethostbyname(name) # get host by name 
+        os.system("clear")
         print(f"ip address : ", Fore.RED + by_name) # red ip 127.0.0.1
     except:
         print(Fore.RED + "error tools host ") # handel Error 
@@ -99,6 +107,7 @@ elif user == "5":
         user_clender = int(input('Enter Yers : '))
         user_month = int(input('type manth : '))
         new_s_f = calendar.month(user_clender, user_month) # clander 2021 
+        os.system("clear")
         print(Fore.RED + new_s_f) # color red 
     except:
         print(Fore.RED + "error Tools calender ") # handel error 
@@ -108,12 +117,14 @@ elif user == "6":
     try:
         user_time = time() # time [272.9293827382] 
         my_time = localtime(user_time) # local time tm_hour or tm_main or tm_sec 
+        os.system("clear")
         print(F"{my_time.tm_hour}:{my_time.tm_min}:{my_time.tm_sec}") 
     except:
         print(Fore.RED + "error tools time ") # handel Error 
 
 elif user == "7":
     try:
+        os.system('clear')
         print(my_req.req()) # req
     except:
         print(Fore.RED + 'error tools req') # handel eror 
@@ -121,6 +132,7 @@ elif user == "7":
 
 elif user == "8":
     try:
+        os.system("clear")
         font.font_en() # font =>  60 
     except:
         print(Fore.RED + "eror tools font ") # handel Error 
@@ -128,12 +140,14 @@ elif user == "8":
 
 elif user == "9":
     try:
+        os.system("clear")
         print(Danstny.dnst()) # danstny funck == 5000 == 
     except:
         print(Fore.RED + "error tools des ") # handel Error 
 
 elif user == "10":
     try:
+        os.system('clear')
         print(joke.jokes()) # jocke == 7000 === 
     except:
         print(Fore.RED + "error tools joke")
@@ -150,6 +164,7 @@ elif user == "12":
         user_password = int(input('Enter len password : ')) # input len password 
         name = requests.get(
             f"http://api.codebazan.ir/password/?length={user_password}").text # api Create password 
+        os.system("clear")
         print(f"password : {Fore.YELLOW + name}") 
     except:
 
@@ -161,6 +176,7 @@ elif user == "13":
         Wikipedia_user = input('search in Wikipedia : ') # input serach 
         Wikipedia = requests.get(
             f"https://api.codebazan.ir/wiki/?search={Wikipedia_user}").text # api seach in wikipadia 
+        os.system("clear")
         print(Wikipedia)
     except:
         print(Fore.RED + "error search Wikipedia")
@@ -180,6 +196,7 @@ elif user == "15":
         user_ping = input('Enter site : ') # input site 
         ping = requests.get(
             f"https://api.codebazan.ir/ping/?url={user_ping}").text # ping site 
+        os.system("clear")
         print(f"ping site : {Fore.LIGHTBLUE_EX + ping}")
 
     except:
@@ -198,8 +215,8 @@ elif user == "16":
 
 elif user == "17":
     try:
-
         user_len = input('Enter Character : ') # enter charchter === name == len(4) 
+        os.system("clear")
         print(F"Number of characters : {len(user_len)}") 
     except:
         print(Fore.RED + "error tools Character ")
@@ -215,6 +232,7 @@ elif user == "19":
     try:
         users_Download = input('Enter linke : ') # enter linke 
         Dosnm = wget.download(users_Download) # download linke inputy !  
+        os.system("clear")
         print(Dosnm)
     except:
         print(Fore.RED + "error tools Download ")
@@ -223,6 +241,7 @@ elif user == "19":
 elif user == "20":
     try:
         email = str(input('enter Email : ')) # Enter email 
+        os.system("clear")
         print(f"your email {verify_email(email)}") # verfiy Emalit 
     except:
         print(Fore.RED + "error tools email ")
