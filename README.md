@@ -59,13 +59,17 @@ NootBok  | Graphic NootBok
 encode | File encoding 
 decode  | Decrypt the file 
 
-<p align="center"> 
+## Linux : 
 
-  <img src="https://img.shields.io/badge/Telegram-%40YouTube__Packag-green"/>
+`git clone https://github.com/AhSiber/Tools_main.git` | install 
 
-  <img src="https://img.shields.io/badge/lange-En-blue"/>
+`cd tools_main` | open file main 
 
-  <img src="https://img.shields.io/badge/Developer-Ahura-lightgrey"/>
+`cd main` | Open File  
 
-  <img src="https://img.shields.io/badge/Programming%20language-pythin-red"/>
-  <p> 
+`python3 tools_main.py` | Run file python 
+
+
+## Windows : 
+<img src![1](https://user-images.githubusercontent.com/75671611/144374645-11f116e4-fe45-489a-997e-0f4e834e5d98.jpg)
+=""/>
