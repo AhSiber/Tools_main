@@ -71,4 +71,4 @@ decode  | Decrypt the file
 
 
 ## Windows : 
-src![1](https://user-images.githubusercontent.com/75671611/144374645-11f116e4-fe45-489a-997e-0f4e834e5d98.jpg)
+![1](https://user-images.githubusercontent.com/75671611/144374645-11f116e4-fe45-489a-997e-0f4e834e5d98.jpg)
