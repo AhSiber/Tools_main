@@ -72,3 +72,14 @@ decode  | Decrypt the file
 
 ## Windows : 
 ![1](https://user-images.githubusercontent.com/75671611/144374645-11f116e4-fe45-489a-997e-0f4e834e5d98.jpg)
+
+ __open CMD__
+
+`cd tools_main` | cd Main File 
+
+`cd main ` | cd File 
+
+`python3 tools_main.py ` | run file 
+
+## If the file is run, use the following command!  : 
+`python tools_main.py` 
