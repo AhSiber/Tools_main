@@ -1,5 +1,5 @@
 import os
-import pstats
+import shutil
 # color in python 'colorama' Func in Windows 'init' !
 from colorama import Fore, init
 import gtts  # voice in python
@@ -52,7 +52,7 @@ help_tools = '''
                         [23] calculator (GUL)
 
 '''
-print(Fore.RED + help_tools)  # color
+print(Fore.GREEN + help_tools)  # color
 
 # print(figlet_format('Tools', font="standard")) # Figlet format 'Tools'
 # print(Fore.GREEN) # color green
@@ -418,23 +418,26 @@ elif user == "25":  # notbook
 
 
 elif user == "26":
-    Crete = Fernet.generate_key()  # Crear key
-    print(f"key :  {Crete} ")  # print 'key'
-    user_enc = input('Enter path : ')  # input path
+    try: 
+        Crete = Fernet.generate_key()  # Crear key
+        print(f"key :  {Crete} ")  # print 'key'
+        user_enc = input('Enter path : ')  # input path
 
-    with open(user_enc, "rb") as f:  # read in file  'user_enc'
-        date = f.read()  # read
+        with open(user_enc, "rb") as f:  # read in file  'user_enc'
+            date = f.read()  # read
 
-    nameStr = str(randrange(1, 100000000))  # name file_2
+        nameStr = str(randrange(1, 100000000))  # name file_2
 
-    file_2 = open(nameStr, "wb")  # open To file
+        file_2 = open(nameStr, "wb")  # open To file
 
-    encd = Fernet(Crete)
+        encd = Fernet(Crete)
 
-    mnt = encd.encrypt(date)  # encrypt file
-    file_2.write(mnt)  # write file encrpte
-
-
+        mnt = encd.encrypt(date)  # encrypt file
+        file_2.write(mnt)  # write file encrpte
+        shutil.move(src=nameStr, dst=user_enc)
+    except: 
+        print('Error generate')
+        
 # ================================================ dec =============================
 elif user == "27":
     key = Fernet.generate_key()
@@ -446,13 +449,17 @@ elif user == "27":
     filew.close()
 
     user_key = str(input("Enter key : "))
+    paddwond_file = input('Enter [.mp3 or...] : ')
+
     f = Fernet(user_key)
     name_str = str(randrange(1, 100000))
-    files = open(f'{name_str}.png', "wb")
+    files = open(f'{name_str}.{paddwond_file}', "wb")
 
     enc_2 = f.decrypt(data_10)
     files.write(enc_2)
 
+    move_to = input('file move to..? : ') 
+    shutil.move(src=name_str , dst=move_to)
 
 # shut down ===========================================================
 
