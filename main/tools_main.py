@@ -6,7 +6,7 @@ import gtts  # voice in python
 # from pyfiglet import figlet_format # pyfiglet in python 'Tools'
 from socket import gethostbyname, gethostname  # ip in socket '127.0.0.1'
 import calendar  # calend in python '2021' , '4' , '23'
-from time import time, localtime  # time 12 : 00
+from time import time, localtime , sleep# time 12 : 00 
 import wget  # dowanload in python link
 import requests  # request api
 from def_init_mine import my_req  # funck my_req
@@ -24,6 +24,7 @@ from cryptography.fernet import Fernet  # Encode end decrypt
 import platform
 import sys
 from pytube import YouTube
+from notifypy import Notify
 
 # clear system !
 os.system("clear")
@@ -473,7 +474,8 @@ elif user == '28':
 # [31] show UUID 
 # [32] ipconfig
 # [33] YouTube Downloads
-
+# [34] project python!
+# [35] Timers
     """
     print(Fore.GREEN + page_1)
     user_page_1 = int(input('enter tools : ').lower())  # input tools number
@@ -528,8 +530,64 @@ elif user == '28':
             streem.download()
         except: 
             print(Fore.RED + "error download link " + Fore.BLUE + f"[{youtube_download}]")
-    
+
+    elif user_page_1 == 34:
+        try: 
+            from bs4 import BeautifulSoup 
+            from requests import get 
+            
+            opathin = str(input('Enter name project : '))
+            urls  = get(f"https://pypi.org/project/{opathin}/") 
+
+            send_requests = BeautifulSoup(urls.text , 'html.parser') 
+            system('clear')  
+
+            short_list = [''] 
+            pip_ = send_requests.find(id="pip-command").text
+            versipn_ = send_requests.find(class_="package-header__name").text 
+            print(f"Install : {pip_} version : {versipn_}") 
+        except: 
+            print("Erro and Not find!")
+    elif user_page_1 == 35: 
+        hour = int(input('Enter Time Hour : '))
+        mins = int(input('Enter Time Min : ')) 
+        sec = int(input('Enter Time Secandes : ')) 
+        
+        while True:
+
+            if hour == 0 and mins == 0 and sec == 0 : 
+                print("Time Is UP") 
+                not_send = Notify()
+                not_send.title = 'timer'
+                timers = time() 
+                loc = localtime(timers) 
+
+                not_send.message = f'Timer finished time now : {loc.tm_hour}:{loc.tm_min}:{loc.tm_sec}'
+                not_send.send(block=True)
+                break
+
+            elif sec > 0: 
+                print(f"{hour}:{mins}:{sec}") 
+                sec -= 1 
+                sleep(1)
+                system('clear') 
+
+            elif sec == 0:
+                mins -= 1 
+                sec += 59
+                print(f"{hour}:{mins}:{sec}")
+                sleep(1.0) 
+                system('clear') 
+            elif mins == 0 : 
+                hour -= 1 
+                mins += 60
+                print(f"{hour}:{mins}:{sec}")
+                sleep(1.0) 
+                system('clear')
+
+
 # ======================================================= Time =======
+
 Time_end_res = time()  # time
 my_and_rews = localtime(Time_end_res)
 
