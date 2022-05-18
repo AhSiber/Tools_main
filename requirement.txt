@@ -1,0 +1,8 @@
+colorama=0.4.4
+gTTS=2.2.4 
+pyfiglet=release 0.7.2
+wget=3.2
+verify_email=2.4.3 
+cryptography=318 0.3.1
+numpy
+sympy
