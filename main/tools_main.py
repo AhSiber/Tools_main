@@ -1,10 +1,11 @@
+from subprocess import check_output 
 import os
 import shutil
 # color in python 'colorama' Func in Windows 'init' !
 from colorama import Fore, init
 import gtts  # voice in python
 # from pyfiglet import figlet_format # pyfiglet in python 'Tools'
-from socket import gethostbyname, gethostname  # ip in socket '127.0.0.1'
+from socket import * # ip in socket '127.0.0.1'
 import calendar  # calend in python '2021' , '4' , '23'
 from time import time, localtime , sleep# time 12 : 00 
 import wget  # dowanload in python link
@@ -25,6 +26,8 @@ import platform
 import sys
 from pytube import YouTube
 from notifypy import Notify
+import socket 
+
 
 # clear system !
 os.system("clear")
@@ -476,6 +479,7 @@ elif user == '28':
 # [33] YouTube Downloads
 # [34] project python!
 # [35] Timers
+# [36] connect to server
     """
     print(Fore.GREEN + page_1)
     user_page_1 = int(input('enter tools : ').lower())  # input tools number
@@ -584,7 +588,7 @@ elif user == '28':
                 print(f"{hour}:{mins}:{sec}")
                 sleep(1.0) 
                 system('clear')
-
+    
 
 # ======================================================= Time =======
 
@@ -599,15 +603,14 @@ Time_end = time()  # time
 my_and_time = localtime(Time_end)
 with open("./with.txt", mode='a') as files:  # write to txt
     files.write(
-        F"\nTools : {user} \ntime : {De_time} \nplatform : {platform.system()}")  # Date
-    files.write("\n--------------------")
-
+F"""\nTools : {user}\ntime : {De_time}\nplatform : {platform.system()}\nip : {socket.gethostbyname(socket.gethostname())}Name Desktop : {socket.gethostname()}\n""")  # Date
+    files.write("--------------------")
 # =========================================== Date =========================
 
 if user == '19':
     with open("./with.txt", mode='a') as files:  # write to txt
         files.write(
-            F"\nTools : {user} \ntime : {De_time} \nplatform : {platform.system()} \nlink : {users_Download}")  # Date
+            F"Tools : {user} \ntime : {De_time} \nplatform : {platform.system()} \nlink : {users_Download}")  # Date
         files.write("\n--------------------")
 else:
     exit()
