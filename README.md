@@ -1,27 +1,33 @@
-# 𝐃𝐞𝐬𝐜𝐫𝐢𝐩𝐭𝐢𝐨𝐧
-
+# Description
 I'm here to have 35 interesting tools tools ' Tools Main '
 To introduce you.
 
-# 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝 
+# Download
 
-HTTPS:
+https:
 
     git clone https://github.com/AhSiber/Tools_main.git
 
-SSH : 
+ssh :
 
-    ssh git@github.com:AhSiber/Tools_main.git 
+    ssh git@github.com:AhSiber/Tools_main.git
 
-GITCLI:
+git cli:
 
     gh repo clone AhSiber/Tools_main
 
 
-# 𝐋𝐢𝐛𝐫𝐚𝐫𝐢𝐞𝐬 
+# Libraries
 
-𝐋𝐢𝐛𝐫𝐚𝐫𝐢𝐞𝐬:| pstats | time     | meali      | 
--------|---------|----------|-------     | 
+𝐋𝐢𝐛𝐫𝐚𝐫𝐢𝐞𝐬:| pstats | time     | meali      |
+-------|---------|----------|-------     |
 os     |colorama | wget     |verify_email|
 gtts   | socket  | requests |random      |
 cryptography |pytube| sys   |shutil      |
+
+
+# how install Script ?
+
+    pip  install -r requirement.txt
+    cd main
+    python3 tools_main.py
